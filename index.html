@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const data = [
+  { German: "Keller", English: "Bestment", Article: "das" },
+  { German: "Bett", English: "Bed", Article: "das" },
+  { German: "Bestment", English: "Bathroom", Article: "das" },
+  { German: "Schlafzimmer", English: "Bedroom", Article: "das" },
+  { German: "Korridor", English: "Corridor", Article: "der" },
+  { German: "Esszimmer", English: "Dining room", Article: "das" },
+  { German: "Garten", English: "Garden", Article: "der" },
+  { German: "Kinderzimmer", English: "Kids room", Article: "das" },
+  { German: "küche", English: "Kitchen", Article: "die" },
+  { German: "wohnzimmer", English: "livingroom", Article: "das" },
+  { German: "toilette", English: "Toliet", Article: "die" },
+  { German: "Arbaitzimmer", English: "Ofice room", Article: "das" },
+  { German: "Waschküche", English: "Washing room", Article: "die" },
+  { German: "Obergeschoss", English: "Upstairs", Article: "-" },
+  { German: "Erdgeschoss", English: "Ground floor", Article: "-" },
+  { German: "Untergeschoss", English: "Basment", Article: "-" },
+  { German: "Treppe", English: "Stairs", Article: "die" },
+  { German: "Wohnung", English: "Apartment", Article: "die" },
+  { German: "Balkon", English: "Balcony", Article: "der" },
+  { German: "möbellager", English: "Furnitures", Article: "das" },
+  { German: "Terrasse", English: "terrace", Article: "die" },
+  { German: "Raum", English: "room", Article: "der" },
+  { German: "Wand", English: "Wall", Article: "die" },
+  { German: "Couch", English: "Couch", Article: "die" },
+  { German: "Decke", English: "Covers", Article: "die" },
+  { German: "Schrankwand", English: "wall unit", Article: "die" },
+  { German: "Schreibtischstuhl", English: "Desk chair", Article: "der" },
+  { German: "Teppich", English: "Carpet", Article: "der" },
+  { German: "Wandregal", English: "shelf", Article: "das" },
+  { German: "Steckdose", English: "Socket", Article: "die" },
+  { German: "Kissen", English: "Pillow", Article: "das" },
+  { German: "Bild", English: "picture", Article: "das" },
+  { German: "Schreibtisch", English: "Desk", Article: "der" },
+  { German: "Lampe", English: "Lamp", Article: "die" },
+  { German: "Stuhl", English: "Chair", Article: "der" },
+  { German: "kommode", English: "dresser", Article: "die" },
+  { German: "Heizung", English: "heater", Article: "die" },
+  { German: "Ventilator", English: "Fan", Article: "der" },
+  { German: "Schrank", English: "Closet", Article: "der" },
+  { German: "Flughafen", English: "Airport", Article: "der" },
+  { German: "Verbindung", English: "Connections", Article: "die" },
+  { German: "Gelegen", English: "loctaed", Article: "-" },
+  { German: "zentral", English: "central", Article: "-" },
+  { German: "Miten", English: "rent", Article: "der" },
+  { German: "Vermieter", English: "Landlord", Article: "der" },
+  { German: "Ablösen", English: "Fee", Article: "die" },
+  { German: "Gebäude", English: "Building", Article: "das" },
+  { German: "Haus", English: "house", Article: "das" },
+  { German: "linken", English: "left side", Article: "-" },
+  { German: "Ecke", English: "corner", Article: "-" },
+  { German: "steht", English: "stand", Article: "-" },
+  { German: "liegen", English: "lie", Article: "-" },
+  { German: "Hängen", English: "hang", Article: "-" },
+  { German: "Gegenüber", English: "Oposite", Article: "-" },
+  { German: "Baum", English: "Tree", Article: "der" },
+  { German: "Weihnachtsbaum", English: "Christmas tree", Article: "der" },
+  { German: "Brauch", English: "Costume", Article: "der" },
+  { German: "Dekoration", English: "Decoration", Article: "die" },
+  { German: "Feier", English: "Celebration", Article: "die" },
+  { German: "Studienabschluss", English: "Graduation", Article: "die" },
+  { German: "Abschlussfeiern", English: "Graduation", Article: "die" },
+  { German: "Geburstag", English: "Birthday", Article: "der" },
+  { German: "Heligabend", English: "Christmas eve", Article: "der" },
+  { German: "Hochzeit", English: "Wedding", Article: "die" },
+  { German: "Kerze", English: "Candle", Article: "die" },
+  { German: "Kirche", English: "Church", Article: "die" },
+  { German: "Leben", English: "Life", Article: "das" },
+  { German: "Silvester", English: "New Year", Article: "das" },
+  { German: "Ostern", English: "Easter", Article: "das" },
+  { German: "Wagen", English: "Car", Article: "der" },
+  { German: "Weihnachten", English: "Christmas", Article: "das" },
+  { German: "Zug", English: "Train", Article: "der" },
+  { German: "Einschulung", English: "First day of school", Article: "der" },
+  { German: "Oktoberfest", English: "Oktoberfest", Article: "die" },
+  { German: "Fasching", English: "Carnival", Article: "der" },
+  { German: "Mutterstag", English: "Mother's day", Article: "der" },
+  { German: "Einladung", English: "Invitation", Article: "" },
+  { German: "Zusage", English: "Promise", Article: "" },
+  { German: "Absage", English: "Cancellation", Article: "" },
+  { German: "Bachelor", English: "Bachelor", Article: "der" },
+  { German: "Diplom", English: "Diploma", Article: "das" },
+  { German: "Examen", English: "Exam", Article: "das" },
+  { German: "Master", English: "Master", Article: "der" },
+  { German: "Prüfung", English: "Exam", Article: "die" },
+  { German: "Studienabshlusse", English: "Graduation", Article: "der" },
+  { German: "Besteck", English: "Cutlery", Article: "das" },
+  { German: "Löffel", English: "Spoon", Article: "der" },
+  { German: "Messer", English: "Knife", Article: "das" },
+  { German: "Gabel", English: "Fork", Article: "die" },
+  { German: "Dorf", English: "Village", Article: "das" },
+  { German: "Geschäft", English: "Shop", Article: "das" },
+  { German: "Geschirr", English: "Crockery", Article: "das" },
+  { German: "Teller", English: "Dish", Article: "der" },
+  { German: "Tasse", English: "Mug", Article: "die" },
+  { German: "Schüssel", English: "Bowl", Article: "die" },
+  { German: "Topf", English: "Pot", Article: "der" },
+  { German: "Nachbar", English: "Neighbor", Article: "der" },
+  { German: "Alltag", English: "Routine", Article: "der" },
+  { German: "Ausflug", English: "Trip", Article: "der" },
+  { German: "Ausland", English: "Foreign", Article: "das" },
+  { German: "Erfahrung", English: "Experience", Article: "die" },
+  { German: "Auslandserfahrung", English: "Experience abroad", Article: "die" },
+  { German: "Austellung", English: "Show / Exhibition", Article: "die" },
+  { German: "Besucher", English: "Visitor", Article: "der" },
+  { German: "Bürger", English: "Citizen", Article: "der" },
+  { German: "Archiv", English: "Archive", Article: "das" },
+  { German: "heimat", English: "Home", Article: "die" },
+  { German: "Höhepunkt", English: "Highlight", Article: "der" },
+  { German: "jahreszeit", English: "Season", Article: "die" },
+  { German: "klang", English: "Sound", Article: "der" },
+  { German: "meinung", English: "Opinion", Article: "die" },
+  { German: "messe", English: "Fair / Exhibition", Article: "die" },
+  { German: "Vergleich", English: "Comparison", Article: "der" },
+  { German: "Witz", English: "Joke", Article: "der" },
+  { German: "schiff", English: "Boat", Article: "das" },
+  { German: "rhein", English: "River", Article: "den" },
+  { German: "Brücke", English: "Bridge", Article: "die" },
+  { German: "Hauptbahnhof", English: "Central station", Article: "der" },
+  { German: "konzerthalle", English: "Concert hall", Article: "die" },
+  { German: "Dom", English: "Cathedral", Article: "der" },
+  { German: "Kneipe", English: "Pub", Article: "die" },
+  { German: "campingplatz", English: "Camping", Article: "der" },
+  { German: "gastgeber", English: "Host", Article: "der" },
+  { German: "hotel", English: "Hotel", Article: "das" },
+  { German: "Jugendherberge", English: "Hostel", Article: "die" },
+  { German: "Baumhaus", English: "Treehouse", Article: "das" },
+  { German: "Pension", English: "Pension / Albergue", Article: "die" },
+  { German: "privatwohnung", English: "Private room", Article: "die" },
+  { German: "zelt", English: "Tent", Article: "das" },
+  { German: "wohnwagen", English: "Caravan", Article: "der" },
+  { German: "wohnmobil", English: "Motorhome", Article: "das" },
+  { German: "Ausbuilding", English: "Internship", Article: "die" },
+  { German: "Berufsausbildung", English: "Professional training", Article: "die" },
+  { German: "Studiengang", English: "Study course", Article: "der" },
+  { German: "Hochschule", English: "School", Article: "die" },
+  { German: "Abitur", English: "Uni test", Article: "das" },
+  { German: "Berufsfachschule", English: "School", Article: "die" },
+  { German: "Grundschule", English: "School", Article: "die" },
+  { German: "Gymnasium", English: "School", Article: "das" },
+  { German: "Klasse", English: "Class", Article: "die" },
+  { German: "Realschule", English: "School", Article: "die" },
+  { German: "Bäcker", English: "Baker", Article: "der" },
+  { German: "Bankkaufmann", English: "Banker", Article: "der" },
+  { German: "Elektroniker", English: "Electronical", Article: "der" },
+  { German: "Erzieher", English: "Educator", Article: "der" },
+  { German: "Florist", English: "Florist", Article: "der" },
+  { German: "Konditor", English: "Pastry chef", Article: "der" },
+  { German: "Kraftfahrer", English: "Driver", Article: "der" },
+  { German: "Maneger", English: "Manager", Article: "der" },
+  { German: "Mechaniker", English: "Mechanic", Article: "der" },
+  { German: "Rechtsanwalt", English: "Lawyer", Article: "der" },
+  { German: "Tierarzt", English: "Veterinarian", Article: "der" },
+  { German: "Übersetzer", English: "Translator", Article: "der" }
+];
+
+let currentWordIndex = getRandomIndex();
+
+        function getRandomIndex() {
+          return Math.floor(Math.random() * data.length);
+        }
+
+        function displayWord() {
+          const wordDiv = document.getElementById('wordDiv');
+          const germanWord = data[currentWordIndex].German;
+          const article = data[currentWordIndex].Article;
+          wordDiv.textContent = `${article} ${germanWord}`;
+        }
+
+        function checkAnswer() {
+          const englishInput = document.getElementById('englishInput').value.trim();
+          const correctEnglishWord = data[currentWordIndex].English;
+          const resultDiv = document.getElementById('resultDiv');
+
+          if (englishInput.toLowerCase() === correctEnglishWord.toLowerCase()) {
+            resultDiv.textContent = 'Correct!';
+          } else {
+            resultDiv.textContent = 'Wrong!';
+          }
+        }
+
+        function skipWord() {
+          currentWordIndex = getRandomIndex();
+          displayWord();
+          document.getElementById('resultDiv').textContent = '';
+          document.getElementById('englishInput').value = '';
+        }
+
+        function showSolution() {
+          const solutionDiv = document.getElementById('solutionDiv');
+          const correctEnglishWord = data[currentWordIndex].English;
+          solutionDiv.textContent = `Solution: ${correctEnglishWord}`;
+        }
+    </script>
+</head>
+<body>
+  <h1>Word Quiz</h1>
+  <div id="wordDiv"></div>
+  <input type="text" id="englishInput" placeholder="Enter English word">
+  <button onclick="checkAnswer()">Check</button>
+  <button onclick="skipWord()">Skip</button>
+  <button onclick="showSolution()">Show Solution</button>
+  <div id="resultDiv"></div>
+  <div id="solutionDiv"></div>
+
+  <script>
+    displayWord();
+  </script>
+</body>
+</html>
